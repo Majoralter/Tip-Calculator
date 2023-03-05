@@ -51,8 +51,3 @@ for(let i = 0 ; i < tipPercentArr.length; i++){
 resetBtn.addEventListener("click", () =>{
     window.location.reload()
 })
-
-
-
-
-
