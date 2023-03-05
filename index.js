@@ -19,9 +19,11 @@ resetBtn.classList.add("active")
     resetBtn.classList.remove("active")
 }
 
-if(bill === "" || noOfPeople === ""){
+if(bill === "" || noOfPeople === "" || noOfPeople === 0){
     amountPerPerson.textContent = "$0.00"
 }
+
+
 
 document.getElementById("custom-tip").onkeyup = () =>{
     let tipPrice = document.getElementById("tip-amount")
