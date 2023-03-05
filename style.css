@@ -1,0 +1,201 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Space Mono", sans-serif;
+    font-weight: 700;
+}
+
+:root{
+    /* COLORS */
+
+ --Very-dark-cyan: hsl(183, 100%, 15%);
+--Dark-grayish-cyan: hsl(186, 14%, 43%);
+--Grayish-cyan: hsl(184, 14%, 56%);
+--Light-grayish-cyan: hsl(185, 41%, 84%);
+--Very-light-grayish-cyan: hsl(189, 41%, 97%);
+--White: hsl(0, 0%, 100%);
+--Strong-cyan: hsl(172, 67%, 45%);
+}
+
+body{
+    background-color: var(--Light-grayish-cyan);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    min-height: 100vh;
+}
+
+.calculator-container{
+    padding: 20px;
+    background-color: var(--White);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+}
+
+.details,.results{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 30px;
+    width: calc(100% - 40px);
+    padding: 15px;
+}
+
+label{
+    color: var(--Dark-grayish-cyan);
+    font-size: 14px;
+}
+
+.bill,.number-of-people{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+/* TO REMOVE ARROWS FROM NUMBER INPUT  */
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+input{
+    background-color: var(--Very-light-grayish-cyan);
+    border: none;
+    outline: none;
+    padding: 7px 10px;
+    width: calc(100% - 30px);
+    border-radius: 7px;
+    color: var(--Very-dark-cyan);
+    font-size: 18px;
+}
+
+input:focus{
+    outline: solid 2px var(--Strong-cyan);
+}
+
+::placeholder{
+    color: var(--Grayish-cyan);
+    font-size: 18px;
+}
+
+.tip-amount{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.tip-amount-flex-row-1,.tip-amount-flex-row-2{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.tip-amount button{
+    padding: 10px 35px;
+    font-size: 18px;
+    color: var(--White);
+    border: none;
+    background-color: var(--Very-dark-cyan);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--Strong-cyan);
+    color: var(--Very-dark-cyan);
+    transition: all .3s ease-in-out;
+}
+
+#custom-tip{
+    width: 70px;
+}
+
+.results{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 15px;
+    height: calc(100% - 40px);
+    padding: 20px;
+}
+
+.tip-amount-result,.amount-per-person{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tip-amount-result h1,.amount-per-person h1{
+   font-size: 36px;
+   color: var(--Strong-cyan);
+   margin-left: 40px;
+}
+
+.result-label{
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.result-label p {
+    font-size: 14px;
+    color: var(--White);
+}
+
+.result-label span{
+    color: var(--Dark-grayish-cyan);
+    font-size: 12px;
+}
+
+#reset-btn{
+    width: 100%;
+    padding: 10px 30px;
+    border-radius: 7px;
+    border: none;
+    font-size: 18px;
+    color: var(--Very-dark-cyan);
+    background-color: var(--Dark-grayish-cyan);
+    margin-top: 70px;
+    cursor: pointer;
+}
+
+#reset-btn:hover{
+    background-color: var(--Light-grayish-cyan);
+}
+
+#reset-btn.active{
+    background-color: var(--Strong-cyan);
+}
+
+@media(max-width:820px){
+   body{
+    padding: 30px;
+   }
+
+    .calculator-container{
+        flex-direction: column;
+        width: 80vw;
+    }
+
+    .tip-amount button{
+        padding: 10px 20px;
+    }
+
+    .custom-tip{
+        width: 60px;
+    }
+}
