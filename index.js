@@ -47,6 +47,10 @@ for(let i = 0 ; i < tipPercentArr.length; i++){
        tipAmount = Math.round(tipAmount * 100)/100
 
         tipPrice.textContent = `$${tipAmount}`
+
+        if(bill === "" || noOfPeople === ""){
+        tipPrice.textContent = "$0.00"
+}
     })
 }
 
